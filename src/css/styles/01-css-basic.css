@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'NanumGothicCoding';
+  src: url('/src/assets/font/NanumGothicCoding-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* body 요소의 배경색, 글자색 지정 */
 body {
   background-color: black;
   color: rgba(240, 240, 240, 0.5);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'NanumGothicCoding', 'Times New Roman', Times, serif;
 }
 
 h1 {
