@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 버튼요소</title>
+  </head>
+  <body>
+    <h1>버튼 요소</h1>
+    <form action="/" method="post" id="button-form">
+      <div>
+        <label for="user">사용자 이름</label><input type="text" id="user" />
+      </div>
+      <div>
+        <label for="user">사용자 암호</label><input type="password" id="pwd" />
+      </div>
+      <div>
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+        <input type="button" value="Click Me!" />
+      </div>
+      <div>
+        <button type="submit">전송</button>
+        <button type="reset">초기화</button>
+        <button type="button">클릭!</button>
+      </div>
+
+      <div>
+        <button type="search">
+          <img src="/src/assets/icon/search.svg" alt="검색하기" />
+        </button>
+        <button type="search" aria-label="검색">
+          <img src="/src/assets/icon/search.svg" alt="" />
+        </button>
+      </div>
+    </form>
+    <button type="reset" form="button-form">초기화</button>
+  </body>
+</html>
