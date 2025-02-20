@@ -1,0 +1,32 @@
+/* class 선택자 */
+/* 배경색상 */
+.member-service {
+  background-color: yellow;
+  /* font-variant: small-caps; */
+  text-transform: uppercase;
+  /* font 단축 속성, size, font */
+font: 1.125rem suit,sans-serif;
+
+
+  /* tag 선택자 */
+  /* 웹브라우저 스타일(밑줄) 재정의(삭제) */
+  /* 웹브라우저 링크 스타일(색상)을 재정의 (상속) */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* ai 코드 */
+  /* a:nth-child(n + 2):before {
+  content: ':';
+} */
+
+  /* 강사님 코드 */
+  a::before {
+    content: ':';
+  }
+
+  a:first-child::before {
+    content: '';
+  }
+}
