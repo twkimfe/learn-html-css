@@ -1,6 +1,14 @@
 /* font-family 속성 - 글꼴 */
+/* 루트 요소 */
+:root {
+  /* 혹은 html 사용 */
+  font-size: 10px;
+}
+
 body {
   font-family: 'SUIT', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 h1 {
@@ -9,7 +17,11 @@ h1 {
 
 /* font size 속성 적용 - 글자 크기, 굵이, 기울림꼴 */
 .size {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 300;
   font-style: italic;
+  line-height: 1.5;
+  font-variant: small-caps;
+  font-family: 'pretendard variable', sans-serif;
+  /* font: bold italic small-caps 24px /1.5 'pretendard variable'; */
 }
