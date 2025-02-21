@@ -4,4 +4,12 @@
 .like{
   border: 5px solid green;
   padding: 20px;
+  width: 150px;
+}
+
+/* width, height 속성으로 크기 지정 */
+.lion{
+  /* display: inline-block; */
+  border: 5px solid red;
+  /* width: 300px; */
 }
