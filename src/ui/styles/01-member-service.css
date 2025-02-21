@@ -50,11 +50,13 @@
   padding-left: 0;
   list-style-type: none;
   font-size: 0;
+  text-align: right;
 
   li{
-    display: inline;
+    display: inline-block;
 
     *{
+      display: inline-block;
       font-size: 0.875rem;
     }
   }
@@ -63,8 +65,10 @@
     text-transform: uppercase;
     text-decoration: none;
     color: inherit;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 8px;
+    background-color: pink;
+    /* padding-left: 8px;
+    padding-right: 8px */
   }
 
   span {
