@@ -1,6 +1,6 @@
-@import '/src/common/best-reset.css';
+@import "/src/common/best-reset.css";
 
-ul {
+ul{
   margin-left: 50px;
   padding-left: 50px;
 }
