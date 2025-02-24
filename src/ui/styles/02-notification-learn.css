@@ -1,0 +1,49 @@
+@import '/src/common/mini-reset.css';
+
+/* 개인 코드 */
+:root {
+  /* 색상 팔레트 */
+  --green: #22be61;
+  --grey: #929b90;
+
+  /* 주요 색상 */
+  --primary-color: var(--green);
+  --secondary-color: var(--grey);
+
+  /* size */
+  --small: 0.75rem;
+  --medium: 0.875rem;
+  --large: 3.75rem;
+}
+
+body {
+  margin: 50px;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+/* 알림 */
+.notification {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid var(--grey);
+  padding: 20px;
+  gap: 10px;
+
+  .notification-subject {
+    color: var(--green);
+  }
+
+  .notification-time {
+    color: var(--green);
+    font-size: var(--small);
+    font-weight: bold;
+  }
+
+  .notification-content {
+    color: var(--grey);
+    font-size: var(--medium);
+  }
+}

@@ -1,0 +1,88 @@
+@import '/src/common/mini-reset.css';
+
+/* 강사님 코드 예시 */
+:root {
+  /* 색상 */
+  --green: #22be61;
+  --silver: #929b90;
+  --brown: #e3a368;
+
+  /* 여백 */
+  --spacing-8: 0.5rem;
+  --spacing-10: 0.625rem;
+  --spacing-20: 1.25rem;
+  --spacing-50: 3.125rem;
+  --spacing-70: 4.375rem;
+
+  /* 글자 크기 */
+  --small-12: 0.75rem;
+  --medium-14: 0.875rem;
+  --large-18: 1.125rem;
+}
+
+body {
+  margin: var(--spacing-50);
+}
+
+h1 {
+  margin-bottom: var(--spacing-50);
+}
+
+/* 알림 컨테이너 */
+/* flex는 아직 안 배움 */
+/* 그래서 컴포넌트 생성, 알맞은 배치를 위해 컨테이너 갭을 주는 방향으로 컴포넌트 간 여백을 줘야함 */
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+/* 알림 */
+.notification {
+  --border-color: var(--silver);
+  --text-color: var(--silver);
+  --base-spacing: var(--spacing-20);
+  --base-gap: var(--spacing-10);
+  --large-spacing: var(--spacing-70);
+
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: var(--spacing-8);
+  background: no-repeat var(--base-spacing) 50%;
+
+  padding: var(--base-spacing) var(--base-spacing) var(--base-spacing)
+    var(--large-spacing);
+  margin-top: var(--base-gap);
+
+  .notification-subject {
+    font-size: var(--large-18);
+  }
+  .notification-time {
+    font-size: var(--small-12);
+    position: absolute;
+    top: var(--base-spacing);
+    right: var(--base-spacing);
+  }
+  .notification-content {
+    font-size: var(--medium-14);
+    margin-top: var(--base-gap);
+    color: var(--silver);
+  }
+  &.green {
+    background-image: url(/src/assets/svg/pot.svg);
+
+    .notification-subject,
+    .notification-time {
+      color: var(--green);
+    }
+  }
+  &.brown {
+    background-image: url(/src/assets/svg/rice.svg);
+
+    .notification-subject,
+    .notification-time {
+      color: var(--brown);
+    }
+  }
+}
