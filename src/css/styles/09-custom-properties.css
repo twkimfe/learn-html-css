@@ -1,14 +1,26 @@
 /* 전역 변수 정의 */
-:root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
+@property --text-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: orange;
+}
 
+:root {
+  /* 색상 팔레트 */
   --white: #fff;
   --black: #000;
   --red: #f00;
   --green: #0f0;
   --blue: #00f;
   --yellow: yellow;
+  --orange: orange;
+  --light-blue: aqua;
+
+  /* 주요 색상 */
+  --primary-color: var(--orange);
+  --secondary-color: var(--light-blue);
+  --accent-color: var(--yellow);
+  --border-color: var(--red);
 
   /* size */
   --small: 0.75rem;
@@ -17,18 +29,29 @@
   --large: 1.125rem;
 }
 
+.container {
+  color: var(--text-color);
+
+  .parent {
+    --text-color: blue;
+
+    .child {
+      color: var(--text-color);
+    }
+  }
+}
+
 .wrapper {
+  --font-size: var(--small);
+  --bg-color: var(--primary-color);
+  --text-color: var(--accent-color);
+
   button {
-    font-size: var(--font-size);
+    font-size: var(--font-size, 1rem);
     background-color: var(--bg-color);
     color: var(--text-color);
   }
 
-  button.open {
-    --font-size: var(--small);
-    --bg-color: var(--green);
-    --text-color: var(--red);
-  }
   button.close {
     --font-size: var(--default);
   }
@@ -56,7 +79,6 @@
     border-color: var(--border-color);
   }
 }
-
 .text-card-2 {
   /* 지역 변수 정의 */
   --bg-color: var(--blue);
