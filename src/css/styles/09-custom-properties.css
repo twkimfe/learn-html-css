@@ -1,0 +1,75 @@
+/* 전역 변수 정의 */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --green: #0f0;
+  --blue: #00f;
+  --yellow: yellow;
+
+  /* size */
+  --small: 0.75rem;
+  --medium: 0.875rem;
+  --default: 1rem;
+  --large: 1.125rem;
+}
+
+.wrapper {
+  button {
+    font-size: var(--font-size);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  button.open {
+    --font-size: var(--small);
+    --bg-color: var(--green);
+    --text-color: var(--red);
+  }
+  button.close {
+    --font-size: var(--default);
+  }
+  button.popup {
+    --bg-color: var(--blue);
+  }
+  button.info {
+    border-color: var(--yellow);
+  }
+}
+
+.text-card-1 {
+  /* 지역 변수 정의 */
+  --bg-color: var(--green);
+  --border-color: var(--red);
+
+  /* --secondary-color 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
+  h1 {
+    background-color: var(--bg-color);
+  }
+
+  p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+  }
+}
+
+.text-card-2 {
+  /* 지역 변수 정의 */
+  --bg-color: var(--blue);
+  --border-color: var(--green);
+
+  /* --secondary-color 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
+  h1 {
+    background-color: var(--bg-color);
+  }
+
+  p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+  }
+}
