@@ -1,0 +1,33 @@
+@import '/src/common/theme.css';
+
+/* CSS의 display 속성으로 특정 영역 안 보이게 설정 */
+/* .mom-friend-son {
+  display: none;
+} */
+
+/* float 사용하기 */
+.card {
+  background: var(--pastel-pink);
+  border: 1px solid green;
+
+  .thumbnail {
+    background: var(--pastel-yellow);
+    /* float 요소의 부모에 직접 높이를 지정해서 일반 흐름을 벗어난 이미지가 다음 content 영역 레이아웃에 영향을 주는 것을 방지함 */
+    height: 141px;
+
+    img {
+      float: left;
+      width: 100px;
+      /* 이미지 아래쪽 여백을 없애기 위한 트릭들 */
+      vertical-align: middle;
+      /* vertical-align: top; //방안2
+    display: block; //방안3 */
+    }
+  }
+  .subject {
+    background: var(--pastel-blue);
+  }
+  .content {
+    background: var(--pastel-orange);
+  }
+}
