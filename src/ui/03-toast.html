@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>알림</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link rel="stylesheet" href="/src/ui/styles/03-toast.css" />
+  </head>
+  <body>
+    <h1>알림(Notification)</h1>
+    <div class="container">
+      <div class="notification plant-care toast">
+        <h2 class="notification-subject plant-care">화초 관리</h2>
+        <time class="notification-time plant-care time">6분</time>
+        <div class="notification-content">화초에 물을 줄 시간입니다.</div>
+      </div>
+      <div class="notification mealtime toast">
+        <h2 class="notification-subject mealtime">아이 식사</h2>
+        <time class="notification-time mealtime time">지금</time>
+        <div class="notification-content">
+          아이에게 식사를 차려줄 시간입니다.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
