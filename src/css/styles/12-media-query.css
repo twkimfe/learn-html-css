@@ -1,0 +1,20 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/a11y.css';
+
+/* 기본적으로 적용될 배경색 - blue */
+body {
+  background-color: cyan;
+  font-size: 1.5rem;
+
+  /* 뷰포트 크게에 따라 적용될 배경색 - pink */
+  @media (min-width: 600px) {
+    background: pink;
+    font-size: 2rem;
+  }
+
+  /* 가로보기 모드에서 적용될 배경색 - orange */
+  @media (min-width: 1000px) and (orientation: landscape) {
+    background: orange;
+    font-size: 2.5rem;
+  }
+}
