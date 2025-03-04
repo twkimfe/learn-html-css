@@ -1,0 +1,79 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* 체크박스 (배경 이미지) */
+.checkbox {
+  --size: 1.5rem;
+
+  background: yellow;
+  display: inline-flex;
+  /* align-items: center; //아이템 정렬 불가 */
+  height: var(--size);
+  block-size: var(--size);
+  position: relative;
+  font-size: var(--font-md);
+
+  /* .checkbox 컨테이너 안에 자식 요소 중 .bg-img 클래스가 있을 경우 input 요소를 선택 */
+  /* 위 조건대로 코딩 &:has(.bg-img) input{...} */
+
+  /* .checkbox 내 input 요소를 선택 */
+  input {
+    /* display: none; ui구현이 되나 원하는 효과 아님 */
+    position: absolute;
+    top: 0;
+    /* inset-block-start: 0; 논리 단위 */
+    left: 0;
+    /* inset-inline-start: 0; 논리 단위 */
+    margin: 0;
+    width: 100%; /* input 전체 선택한 느낌 구현 */
+    height: var(--size);
+    appearance: none; /* ui상 안 보이게 하는 속성 */
+  }
+  label {
+    background: url(/src/assets/naver/unchecked.svg) no-repeat;
+    padding-left: 2rem;
+    /* padding-inline-start: 2rem; //padding-left과 같음 */
+    /* text-indent: 2rem; */
+    align-content: center;
+    user-select: none;
+  }
+
+  input:checked + label {
+    background-image: url(/src/assets/naver/checked.svg);
+  }
+}
+
+/* 체크박스 (SVG 요소) */
+.checkbox.svg {
+  background: pink;
+  display: inline-flex;
+  align-items: center;
+  column-gap: var(--spacing-2);
+  position: relative;
+
+  input {
+    position: absolute;
+    top: 0;
+    /* inset-block-start: 0; 논리 단위 */
+    left: 0;
+    /* inset-inline-start: 0; 논리 단위 */
+    margin: 0;
+    width: var(--size);
+    height: var(--size);
+    appearance: none;
+  }
+
+  label {
+    display: contents;
+  }
+  input:checked + label .svg--area,
+  input:checked + label .svg--border {
+    fill: var(--green-500);
+  }
+
+  input:checked + label .svg--mark {
+    fill: var(--white);
+  }
+}
