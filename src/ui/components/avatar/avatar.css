@@ -6,9 +6,9 @@
 .img-avatar {
   --size: 4rem;
   --radius: 50%;
-  --state-offline: #dbdbdb;
+  --state: #dbdbdb;
   --state-border: #fff;
-  --state-online: #4cfe88;
+  --state-active: #4cfe88;
 
   width: var(--size);
   position: relative;
@@ -18,26 +18,25 @@
     aspect-ratio: 1/1;
     border-radius: var(--radius);
   }
+
   .state {
     width: 25%;
     aspect-ratio: 1/1;
     border-radius: var(--radius);
-    position: absolute; /* BFC */
-    right: 0px;
-    bottom: 0px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
     border: 2px solid var(--state-border);
+    background: var(--state);
 
-    &.online {
-      background-color: var(--state-online);
-    }
-    &.offline {
-      background-color: var(--state-offline);
+    &.is-active {
+      background: var(--state-active);
     }
   }
 }
 
 /* 인터렉션이 있는 버튼 컴포넌트 */
-.btn-avatar {
+.button-avatar {
   --size: 4rem;
   --radius: 50%;
   --state: #dbdbdb;
@@ -47,8 +46,8 @@
   position: relative;
   width: var(--size);
   background: transparent;
-  border: 0px;
-  padding: 0px;
+  border: 0;
+  padding: 0;
 
   img {
     width: 100%;
@@ -58,14 +57,14 @@
 
   &::after {
     content: '';
-    position: absolute;
+    position: absolute; /* BFC */
     width: 25%;
     aspect-ratio: 1/1;
     border-radius: var(--radius);
-    right: 0px;
-    bottom: 0px;
+    right: 0;
+    bottom: 0;
     border: 2px solid var(--state-border);
-    background-color: var(--state);
+    background: var(--state);
   }
 
   &.is-active::after {
