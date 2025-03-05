@@ -1,0 +1,103 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+
+/* 헤더 */
+.header {
+  background: var(--pastel-coral);
+}
+
+/* 내비게이션 */
+.navigation {
+  background: var(--pastel-green);
+}
+
+/* 메인 콘텐츠 */
+.content {
+  background: var(--pastel-aqua);
+}
+
+/* 사이드 바 */
+.sidebar {
+  background: var(--pastel-yellow);
+}
+
+/* 푸터 */
+.footer {
+  background: var(--pastel-lavender);
+}
+
+.container {
+  display: grid;
+  block-size: 100vh;
+  grid-template-rows: repeat(4, 20px);
+  grid-template-columns: 1fr 2fr 1fr;
+
+  .header {
+    grid-row: span 4;
+    grid-column: span 4;
+  }
+  .navigation {
+    grid-row: span 2;
+    grid-column: span 4;
+  }
+  .content {
+    grid-row: span 4;
+    grid-column: span 4;
+  }
+  .sidebar {
+    grid-row: span 4;
+    grid-column: span 4;
+  }
+  .footer {
+    grid-row: span 1;
+    grid-column: span 4;
+  }
+
+  @media (min-width: 768px) {
+    .header {
+      grid-row: span 4;
+      grid-column: span 4;
+    }
+    .navigation {
+      grid-row: span 2;
+      grid-column: span 4;
+    }
+    .content {
+      grid-row: span 4;
+      grid-column: span 1;
+      width: 50vw;
+    }
+    .sidebar {
+      grid-row: span 4;
+      grid-column: span 1;
+      width: 50vw;
+    }
+    .footer {
+      grid-row: span 1;
+      grid-column: span 4;
+    }
+  }
+  @media (min-width: 1024px) {
+    .header {
+      grid-row: span 4;
+      grid-column: span 4;
+    }
+    .navigation {
+      grid-row: span 2;
+      grid-column: span 4;
+    }
+
+    .content {
+      grid-row: span 4;
+      grid-column: 1/2;
+    }
+    .sidebar {
+      grid-row: span 4;
+      grid-column: 2/3;
+    }
+    .footer {
+      grid-row: span 4;
+      grid-column: 3/4;
+    }
+  }
+}
