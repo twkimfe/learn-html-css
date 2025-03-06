@@ -1,0 +1,41 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+body {
+  margin: 20px;
+}
+
+figure {
+  /* background: green; */
+  border: 2px solid grey;
+  padding: 1em;
+  margin-block: 20px;
+
+  columns: 5rem 3;
+  column-gap: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+
+  break-before: column;
+
+  img {
+    aspect-ratio: 3/2;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 0;
+    filter: sepia();
+  }
+}
+
+figcaption {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  opacity: 0.4;
+  color: white;
+  padding: 2em;
+}
