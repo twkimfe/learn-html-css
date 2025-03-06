@@ -1,0 +1,61 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+.container {
+  background: var(--pastel-lavender);
+  padding: 1em;
+
+  > [class^='case-'] {
+    margin-block: 20px;
+  }
+}
+/* column-width */
+.container > .case-01 {
+  column-width: 15rem;
+  column-rule: 1px solid red;
+  column-gap: 1rem;
+}
+/* column-count */
+.container > .case-02 {
+  column-count: 4;
+  column-rule: 1px dotted green;
+
+  /* column-span: all을 지정하지 위해서는 block 요소여야만 적용됨 */
+  span {
+    display: block;
+    column-span: all;
+    background: green;
+    color: white;
+    padding: 0.5em;
+  }
+}
+
+/* columns short-hand에 column-width 선언 */
+.container > .case-03 {
+  columns: 5rem 3;
+  column-rule: 3px double blue;
+  /* 단위가 있으면 넓이, 없으면 갯수 */
+  column-fill: balance;
+}
+
+/* columns short-hand에 column-count 선언 */
+.container > .case-04 {
+  columns: 2;
+}
+
+/* column-fill: balance 선언 */
+.container > .case-05 {
+  column-fill: auto;
+  /* balance 가 기본값 */
+  columns: 2;
+  height: 100px;
+  block-size: 100px;
+}
+
+.wrapper {
+  background: yellow;
+  padding: 1em;
+  columns: 5;
+}
