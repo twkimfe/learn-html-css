@@ -1,0 +1,13 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/* Select UI */
+
+body {
+  margin: 2em;
+}
+h1 {
+  margin-bottom: 1em;
+}
