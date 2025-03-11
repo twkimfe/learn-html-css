@@ -5,9 +5,38 @@
 
 /* Select UI */
 
-body {
-  margin: 2em;
+
+body{
+  margin: 20px;
 }
-h1 {
-  margin-bottom: 1em;
+
+/* Select Component */
+.select{
+  display: inline-grid;
+  border: 1px solid gray;
+  border-radius: 8px;
+  
+  svg, select{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  svg{
+    margin: 0 0.5em;
+    pointer-events: none;
+  }
+  
+  select{
+    border: 0;
+    background: transparent;
+    appearance: none;
+    padding: 0.5em 1.75em;
+  }
+
+  .icon-global{
+    place-self: center start;
+  }
+
+  .icon-triangle{
+    place-self: center end;
+  }
 }

@@ -12,13 +12,37 @@ h1 {
   margin-bottom: 1em;
 }
 
-.select-section-btn {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+.select {
+  display: inline-grid;
   border: 1px solid gray;
+  border-radius: 8px;
 
-  &:focus {
+  img,
+  select {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  img {
+    display: inline;
+    margin: 0 0.5em;
+    pointer-events: none;
+  }
+
+  select {
+    border: 0;
+    background: transparent;
+    appearance: none;
+    padding: 0.5em 1.75em;
+  }
+
+  .icon-global {
+    place-self: center start;
+  }
+  .icon-triangle {
+    place-self: center end;
+  }
+}
+/*  &:focus {
     border: 1px solid greenyellow;
   }
   .lang-select {
@@ -52,5 +76,4 @@ h1 {
     padding: 0 2px;
     margin: 0;
     z-index: 2;
-  }
-}
+  } */

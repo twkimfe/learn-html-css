@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link rel="stylesheet" href="/src/ui/components/select/select.css" />
+  </head>
+  <body>
+    <h1>Select UI</h1>
+
+    <div class="select">
+      <img
+        class="icon-glocal"
+        src="/src/assets/icon/global.svg"
+        alt="lang-select-icon"
+      />
+      <label for="lang-select" class="sr-only">언어 선택</label>
+      <select name="lang-select" id="lang-select" class="lang-select">
+        <option value="korean">한국어</option>
+        <option value="english">English</option>
+      </select>
+      <img
+        class="icon-triangle"
+        src="/src/assets/icon/triangle.svg"
+        alt="option-select-icon"
+      />
+    </div>
+  </body>
+</html>
